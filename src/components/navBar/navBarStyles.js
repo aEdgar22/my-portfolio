@@ -51,9 +51,21 @@ export const NavListStyled = styled.ul`
     font-weight: ${({ theme }) => theme.fontWeights.fontMedium};
     font-size: ${({ theme }) => theme.sizes.normalFontSize};
     transition: 0.3s;
-
-    &:hover {
-      color: ${({ theme }) => theme.colors.titleColorDark};
+    position: relative;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: ${({ theme }) => theme.colors.titleColor};
+      opacity: 0;
+      transition: opacity 0.3s;
+      /* border-bottom: 1px solid ${({ theme }) => theme.colors.titleColor}; */
+    }
+    &:hover::after{
+      opacity: 1;
     }
   }
 
@@ -61,13 +73,17 @@ export const NavListStyled = styled.ul`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+
+    .nav__link::after{
+      display: none;
+    }
   }
 `;
 
 export const NavMenuStyled = styled.div`
   @media screen and (max-width: 768px) {
     position: fixed;
-    bottom: ${({open}) => open ? '0' : '-100%'};
+    bottom: ${({ open }) => (open ? "0" : "-100%")};
     left: 0;
     width: 100%;
     background-color: #fff;
@@ -75,8 +91,6 @@ export const NavMenuStyled = styled.div`
     box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
     border-radius: 1.5rem 1.5rem 0 0;
     transition: 0.3s;
-
-    
   }
 
   .nav__link-icon {

@@ -2,7 +2,7 @@ const theme = {
     colors:{
         mainColor: '#FAFAFA',
         textColor: '#2C3E50',
-        titleColor: '#3F72AF',
+        titleColor: '#06283D',
         titleColorDark: '#112D4E',
     },
     sizes: {
