@@ -92,7 +92,7 @@ export const HomeDataContainer = styled.div`
 
   .home__subtitle {
     position: relative;
-    font-size: ${({ theme }) => theme.sizes. h2FontSize};
+    font-size: ${({ theme }) => theme.sizes.h2FontSize};
     padding-left: 5.4rem;
     font-weight: ${({ theme }) => theme.fontWeights.fontNormal};
     margin-bottom: 2rem;
