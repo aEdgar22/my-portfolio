@@ -6,7 +6,6 @@ import { HeaderStyled } from "./headerStyles"
 export const Header = () => {
   return (
     <HeaderStyled>
-      
         <Navbar />
     </HeaderStyled>
   )

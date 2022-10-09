@@ -1,8 +1,17 @@
 import styled from "styled-components";
 
-import homeImg from "../../assets/profile.jpg";
+import homeImg from "../../assets/about2.jpg";
 
-export const HomeSectionStyled = styled.section``;
+export const HomeSectionStyled = styled.section`
+  padding: 6rem 0;
+  height: 100vh;
+
+ 
+  
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
+`;
 
 export const HomeContainer = styled.div`
   row-gap: 8rem;
@@ -124,7 +133,6 @@ export const HomeDataContainer = styled.div`
       margin-bottom: 1rem;
       font-size: ${({ theme }) => theme.sizes.h3FontSize};
 
-
       &::before {
         width: 42px;
         top: 0.8rem;
@@ -158,8 +166,8 @@ export const HomeImg = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   box-shadow: inset 0 0 0 9px rgba(255 255 255 / 30%);
   order: 1;
   justify-self: center;

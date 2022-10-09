@@ -12,20 +12,17 @@ html{
 }
 
 body {
-
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-color: ${({ theme }) => theme.colors.mainColor};
     color: ${({ theme }) => theme.colors.textColor};
-
-
 }
 
 a{
     text-decoration: none;
-    /* color: ${({ theme }) => theme.colors.textColor}; */
+
   
 }
 
@@ -33,24 +30,17 @@ ul{
     list-style: none;
 }
 
-img{
-    max-width: 100%;
-    height: auto;
-}
-
-
-
 .grid{
     display: grid;
     gap: 1.5rem;
 }
 
-.section{
-    padding: 8rem 0 2rem;
-}
+/* .section{
+    padding: 6rem 0 2rem 0;
+} */
 
 .section__title{
-    font-size: ${({ theme }) => theme.sizes.h1FontSize};
+    font-size:clamp(2rem, 5vw, 2.5rem); 
     text-align: center;
 }
 
@@ -96,6 +86,7 @@ img{
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
+
 }
 
 @media screen and (max-width: 992px) {
@@ -107,12 +98,18 @@ img{
         width: 22px;
         height: 22px;
     }
+
 }
 
 
 @media screen and (max-width: 768px) {
+
+    body{
+        margin: 0 0 3rem 0
+    }
+
     .section{
-        padding: 6rem 0 4rem;
+        padding: 8rem 0 4rem;
     }
 }
 
