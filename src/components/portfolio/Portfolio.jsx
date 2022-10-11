@@ -12,7 +12,7 @@ import { useAos } from "../../hooks/useAos";
 export const Portfolio = () => {
   useAos(1500)
   return (
-    <PortfolioStyled id="portfolio" className="container section" data-aos="fade-up">
+    <PortfolioStyled id="portfolio" className="container" data-aos="fade-up">
       <h2 className="section__title">PROYECTOS</h2>
 
       <Swiper

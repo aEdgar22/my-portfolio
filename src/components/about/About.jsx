@@ -32,7 +32,7 @@ export const About = () => {
             el cual me enganchó de inmediato; Así que decidí enfocar mi carrera a esta rama.  <br /> <br />
 
             Me gusta estar en constante aprendizaje y crecimiento personal. Al momento de realizar proyectos,
-            estoy abierto a recibir feedback, para así mejorar la calidad de los mismos.
+            estoy siempre abierto a recibir feedback, para así mejorar la calidad de los mismos.
           </p>
 
           <a download="" href={CV} className="button button--flex">
