@@ -52,5 +52,4 @@ export const AboutContainer = styled.div`
   @media screen and (max-width: 350px) {
   }
 `;
-/* 
-export const InfoStyled = styled.div``; */
+

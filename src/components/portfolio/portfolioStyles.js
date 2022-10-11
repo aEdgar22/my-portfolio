@@ -12,6 +12,7 @@ export const PortfolioStyled = styled.section`
   .project__card {
     padding: 1rem;
 
+
   }
 
   .project__img-container {
@@ -31,6 +32,7 @@ export const PortfolioStyled = styled.section`
     padding: 1rem;
     border-radius: 12px;
     border: 2px solid ${({theme}) =>theme.colors.cardDataColor};
+    background-color: #fff;
     .project_links-container {
       width: 100%;
       height: 4rem;
