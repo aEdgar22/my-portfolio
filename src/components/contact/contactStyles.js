@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const ContactStyled = styled.section`
   padding: 10rem 0 2rem 0;
-
+  margin-bottom: 2rem;
   .contact__container {
     grid-template-columns: repeat(2, 50%);
     padding-top: 3rem;
     column-gap: 4rem;
 
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 768px) {
       grid-template-columns: repeat(1, 100%);
     }
   }
@@ -48,8 +48,9 @@ export const ContactInfoItemContainer = styled.div`
 `;
 
 export const ContactFormStyled = styled.form`
-      border: 2px solid ${({ theme }) => theme.colors.cardDataColor};
-      border-radius: 8px;
+  border: 2px solid ${({ theme }) => theme.colors.cardDataColor};
+  border-radius: 8px;
+  padding: 1rem;
 
   .form__group {
     display: flex;
@@ -77,5 +78,13 @@ export const ContactFormStyled = styled.form`
       resize: none;
       height: auto;
     }
+  }
+
+  .button {
+    height: 1.5rem;
+    font-size: 1rem;
+    font-weight: ${({ theme }) => theme.fontWeights.fontSemiBold};
+    border: none;
+    cursor: pointer;
   }
 `;
