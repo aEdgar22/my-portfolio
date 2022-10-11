@@ -1,4 +1,5 @@
-import imgScriv from "../assets/testimonial1.png";
+import imgCounty from "../assets/country-app.png";
+import imgScriv from "../assets/Scriv.png";
 
 export const data = [
   {
@@ -7,13 +8,21 @@ export const data = [
     description:
       "Landing page para visualizar avances de obras, y hacer donaciones para la comunidad Fuente de Poder. Hecho con React.js.",
     img: imgScriv,
+    links: {
+      github: "",
+      production: "https://scriv.vercel.app/auth/login",
+    },
   },
   {
     id: 2,
-    title: "Scriv",
+    title: "Where in the world",
     description:
       "Landing page para visualizar avances de obras, y hacer donaciones para la comunidad Fuente de Poder. Hecho con React.js.",
-    img: imgScriv,
+    img: imgCounty,
+    links: {
+      github: "",
+      production: "https://country-app-beige.vercel.app/",
+    },
   },
   {
     id: 3,
@@ -21,5 +30,9 @@ export const data = [
     description:
       "Landing page para visualizar avances de obras, y hacer donaciones para la comunidad Fuente de Poder. Hecho con React.js.",
     img: imgScriv,
+    links: {
+      github: "",
+      production: "",
+    },
   },
 ];

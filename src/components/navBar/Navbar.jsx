@@ -22,27 +22,27 @@ const Navbar = () => {
 
       <NavMenuStyled open={toggle}>
         <NavListStyled>
-          <NavItem href="/home">
+          <NavItem href="#home">
             <AiOutlineHome className='nav__link-icon' />
             Home
           </NavItem>
 
-          <NavItem href="/about">
+          <NavItem href="#about">
             <AiOutlineUser className='nav__link-icon' />
             About
           </NavItem>
 
-          <NavItem href="/portfolio">
+          <NavItem href="#portfolio">
             <AiOutlineFolderOpen className='nav__link-icon' />
             Portfolio
           </NavItem>
 
-          <NavItem href="/skills">
+          <NavItem href="#skills">
             <AiOutlineFileText className='nav__link-icon' />
             Skills
           </NavItem>
 
-          <NavItem href="/contact">
+          <NavItem href="#contact">
             <AiOutlineSend className='nav__link-icon' />
             Contact
           </NavItem>

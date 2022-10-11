@@ -4,6 +4,7 @@ const theme = {
         textColor: '#2C3E50',
         titleColor: '#06283D',
         titleColorDark: '#112D4E',
+        cardDataColor: '#DDDDDD'
     },
     sizes: {
         bigFontSize: '3.5rem',

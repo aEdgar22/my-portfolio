@@ -5,7 +5,7 @@ import { Social } from "./Social";
 
 export const Home = () => {
   return (
-    <HomeSectionStyled className="section">
+    <HomeSectionStyled id="home" className="section">
       <HomeContainer className="grid container">
         <div className="home__content grid">
           <Social />

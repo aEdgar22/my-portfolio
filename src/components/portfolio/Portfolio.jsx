@@ -3,13 +3,17 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
 
+import { AiOutlineGithub, AiOutlineLink } from "react-icons/ai";
+
 import { data } from "../../dataProjects/data";
 import { PortfolioStyled } from "./portfolioStyles";
+import { useAos } from "../../hooks/useAos";
 
 export const Portfolio = () => {
+  useAos(1500)
   return (
-    <PortfolioStyled className="container section">
-      <h2 className="section__title">Proyectos</h2>
+    <PortfolioStyled id="portfolio" className="container section" data-aos="fade-up">
+      <h2 className="section__title">PROYECTOS</h2>
 
       <Swiper
         className="projects__container"
@@ -23,15 +27,15 @@ export const Portfolio = () => {
             slidesPerView: 2,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 48,
           },
         }}
         modules={[Pagination]}
       >
-        {data.map(({ id, title, description, img }) => {
+        {data.map(({ id, title, description, img, links }) => {
           return (
-            <SwiperSlide key={id}>
+            <SwiperSlide key={id} className="project__card">
               <div className="project__img-container">
                 <img
                   src={img}
@@ -43,6 +47,15 @@ export const Portfolio = () => {
               <div className="project__data-container">
                 <h3>{title}</h3>
                 <p>{description}</p>
+
+                <div className="project_links-container">
+                  <a href={links.github} target="_blank" rel="noreferrer">
+                    <AiOutlineGithub className="project__links-icon" />
+                  </a>
+                  <a href={links.production} target="_blank" rel="noreferrer">
+                    <AiOutlineLink className="project__links-icon" />
+                  </a>
+                </div>
               </div>
             </SwiperSlide>
           );

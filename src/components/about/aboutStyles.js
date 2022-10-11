@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
 export const AboutStyled = styled.section`
-  padding: 2rem;
-  
+  margin-bottom: 8rem;
+
+  @media screen and (max-width: 576px) {
+    margin-bottom: 0;
+  }
+
 `;
 
 export const AboutContainer = styled.div`
@@ -18,9 +22,9 @@ export const AboutContainer = styled.div`
   }
 
   .about__description {
-    padding: 0 4rem 0 0;
+    padding: 0 2rem 0 0;
     margin-bottom: 2.5rem;
-    font-size: clamp(1.2rem, 1.2vw, 2rem); 
+    font-size: clamp(1.2rem, 1.2vw, 1rem); 
   }
 
   @media screen and (max-width: 998px) {
