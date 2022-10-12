@@ -2,10 +2,13 @@ import Swal from "sweetalert2";
 import { useForm } from "../../hooks/useFrom";
 import { ContactFormStyled } from "./contactStyles";
 import send from "../../assets/send.svg";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import "animate.css";
 
 export const ContactForm = () => {
+  const [isError, setIsError] = useState(false);
+
   const [formValues, handleInputChange, reset] = useForm({
     name: "",
     email: "",
@@ -18,17 +21,23 @@ export const ContactForm = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    if (name === "" || email === "" || message === "") {
+      setIsError(true);
+    } else {
+      e.preventDefault();
 
-    emailjs.sendForm(
-      "service_sfmwp3f",
-      "template_p6tvcz5",
-      form.current,
-      "6Dyq_aNwTZ2zsasxd"
-    );
+      emailjs.sendForm(
+        "service_sfmwp3f",
+        "template_p6tvcz5",
+        form.current,
+        "6Dyq_aNwTZ2zsasxd"
+      );
 
-    Swal.fire("Enviado", "Tu correo se ha enviado con éxito", 'success');
+      Swal.fire("Enviado", "Tu correo se ha enviado con éxito", "success");
 
-    reset();
+      reset();
+      setIsError(false);
+    }
   };
 
   return (
@@ -66,6 +75,16 @@ export const ContactForm = () => {
           value={message}
           onChange={handleInputChange}
         ></textarea>
+
+        <div
+          className={
+            isError
+              ? "error-email isError animate__animated animate__shakeX"
+              : "error-email"
+          }
+        >
+          <p>Todos los campos deben estar llenos</p>
+        </div>
       </div>
 
       <button className="button button--flex">

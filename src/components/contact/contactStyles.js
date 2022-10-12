@@ -55,7 +55,6 @@ export const ContactFormStyled = styled.form`
   .form__group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 2rem;
     padding: 1rem;
 
     label {
@@ -78,6 +77,22 @@ export const ContactFormStyled = styled.form`
       resize: none;
       height: auto;
     }
+
+    .error-email {
+      margin-top: 1rem;
+      border-radius: 10px;
+      background-color: red;
+      color: #fff;
+      padding: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+      display: none;
+    }
+
+    .isError {
+      display: block;
+    }
   }
 
   .button {
@@ -86,5 +101,6 @@ export const ContactFormStyled = styled.form`
     font-weight: ${({ theme }) => theme.fontWeights.fontSemiBold};
     border: none;
     cursor: pointer;
+    margin-top: 1rem;
   }
 `;

@@ -15,12 +15,12 @@ export const ContactInfo = () => {
         data='Edgar De Avila Serpa'
       />
          <ContactInfoItem
-        href="https://www.linkedin.com/in/edgar-de-avila-serpa-b95096249/"
+        href="https://www.instagram.com/e__antonio/"
         Icon={AiOutlineInstagram}
         data='@e__antonio'
       />
          <ContactInfoItem
-        href="https://www.linkedin.com/in/edgar-de-avila-serpa-b95096249/"
+        href="https://github.com/aEdgar22"
         Icon={AiOutlineGithub}
         data='aEdgar22'
       />
