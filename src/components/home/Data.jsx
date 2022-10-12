@@ -11,8 +11,13 @@ export const Data = () => {
       </h1>
       <h3 className="home__subtitle">Frontend Developer</h3>
 
+      <p className="home__description">
+        <i>"El primer paso es establecer que algo es posible, entonces es probable
+        que ocurra." </i> - Elon Musk.
+      </p>
+
       <a href="#contact" className="button button--flex">
-        Say Hello <img className="button__icon" src={send} alt="send" />
+        Di hola <img className="button__icon" src={send} alt="send" />
       </a>
     </HomeDataContainer>
   );
