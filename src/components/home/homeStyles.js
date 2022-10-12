@@ -5,10 +5,10 @@ import homeImg from "../../assets/about2.jpg";
 export const HomeSectionStyled = styled.section`
   padding: 6rem 0;
   height: 100vh;
-
+/* 
   @media screen and (max-width: 992px) {
     padding: 8rem;
-  }
+  } */
 
   @media screen and (max-width: 768px) {
     height: auto;
