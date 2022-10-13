@@ -3,7 +3,7 @@ import styled from "styled-components";
 import homeImg from "../../assets/about2.jpg";
 
 export const HomeSectionStyled = styled.section`
-  padding: 6rem 0;
+  padding: 3rem 0;
   height: 100vh;
 /* 
   @media screen and (max-width: 992px) {
