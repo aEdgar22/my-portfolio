@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const AboutStyled = styled.section`
   margin-bottom: 8rem;
+  padding-top: 3rem;
 
   @media screen and (max-width: 576px) {
     margin-bottom: 0;
