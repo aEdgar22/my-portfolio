@@ -8,7 +8,6 @@ import nodeIcon from "../assets/node.png";
 import sassIcon from "../assets/sass.png";
 import bootstrapIcon from "../assets/bootstrap.png";
 import githubIcon from "../assets/github.png";
-import msyqlIcon from "../assets/mysql.png";
 
 export const frontend = [
   {
@@ -65,9 +64,9 @@ export const backend = [
     skill: "Firebase",
     img: firebaseIcon,
   },
-  {
+/*   {
     id: 3,
     skill: "mysql",
     img: msyqlIcon,
-  },
+  }, */
 ]
