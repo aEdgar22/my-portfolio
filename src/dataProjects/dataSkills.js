@@ -8,6 +8,7 @@ import nodeIcon from "../assets/node.png";
 import sassIcon from "../assets/sass.png";
 import bootstrapIcon from "../assets/bootstrap.png";
 import githubIcon from "../assets/github.png";
+import typescript from "../assets/typescript.png"
 
 export const frontend = [
   {
@@ -27,27 +28,32 @@ export const frontend = [
     img: jsIcon,
   },
   {
-    id: 4,
+    id: 5,
+    skill: "Typescript",
+    img: typescript,
+  },
+  {
+    id: 5,
     skill: "React",
     img: reactIcon,
   },
   {
-    id: 5,
+    id: 6,
     skill: "Redux",
     img: reduxIcon,
   },
   {
-    id: 6,
+    id: 7,
     skill: "Sass",
     img: sassIcon,
   },
   {
-    id: 7,
+    id: 8,
     skill: "Bootstrap",
     img: bootstrapIcon,
   },
   {
-    id: 8,
+    id: 9,
     skill: "Git/Github",
     img: githubIcon,
   },
