@@ -1,6 +1,7 @@
 import imgCounty from "../assets/country-app.png";
 import imgScriv from "../assets/Scriv.png";
 import imgBatata from "../assets/batata.png";
+import fuentePoder from "../assets/fuente_poder.png";
 
 export const data = [
   {
@@ -16,6 +17,16 @@ export const data = [
   },
   {
     id: 2,
+    title: "Plaza de Donaciones",
+    description:
+      "Landing page para visualizar avances de obras, y hacer donaciones para la comunidad Fuente de Poder. Hecho con React.js.",
+    img: fuentePoder,
+    links: {
+      production: "https://pdromoreno7.github.io/church-plaza-donaciones/",
+    },
+  },
+  {
+    id: 3,
     title: "Where in the world",
     description:
       "Where in the world, es un buscador de paises que muestra la información de los mismos; su bandera, población, etc. Hecho con React.js.",
@@ -26,7 +37,7 @@ export const data = [
     },
   },
   {
-    id: 3,
+    id: 4,
     title: "Batata - Landing Page",
     description:
       "Landing page para empresa dedicada al intercambio de criptomonedas. Proyecto de maquetación mobile first con Platzi.",

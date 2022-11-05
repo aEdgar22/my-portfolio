@@ -10,7 +10,7 @@ import { PortfolioStyled } from "./portfolioStyles";
 import { useAos } from "../../hooks/useAos";
 
 export const Portfolio = () => {
-  useAos(1500)
+  useAos(1500);
   return (
     <PortfolioStyled id="portfolio" className="container" data-aos="fade-up">
       <h2 className="section__title">PROYECTOS</h2>
@@ -49,9 +49,14 @@ export const Portfolio = () => {
                 <p>{description}</p>
 
                 <div className="project_links-container">
-                  <a href={links.github} target="_blank" rel="noreferrer">
-                    <AiOutlineGithub className="project__links-icon" />
-                  </a>
+                  {links.github ? (
+                    <a href={links.github} target="_blank" rel="noreferrer">
+                      <AiOutlineGithub className="project__links-icon" />
+                    </a>
+                  ) : (
+                    ""
+                  )}
+
                   <a href={links.production} target="_blank" rel="noreferrer">
                     <AiOutlineLink className="project__links-icon" />
                   </a>
