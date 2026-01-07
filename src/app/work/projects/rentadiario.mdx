@@ -1,0 +1,48 @@
+---
+title: "Rentadiario Ecosystem"
+summary: "Full-scale PropTech platform connecting hosts with travelers. Engineered the core booking engine, real-time calendar availability, and a multi-gateway payment system."
+publishedAt: "2023-01-01"
+images:
+  - "/images/projects/rd-cover.webp"
+team:
+  - name: "Edgar De Avila"
+    role: "Lead Frontend Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/edgar-dev"
+---
+
+## The Challenge
+
+Rentadiario aimed to become the "Colombian Airbnb," requiring a platform capable of handling thousands of properties, complex pricing rules (seasonality, weekend rates), and instant bookings. The existing solution needed a complete overhaul to improve SEO, load times, and user trust during the checkout process.
+
+## Architecture & Performance
+
+My primary focus was migrating and structuring the application to be scalable and performant.
+
+- **Next.js Implementation:** Leveraged Server-Side Rendering (SSR) for property pages to drastically improve SEO ranking on Google, crucial for organic traffic.
+- **Component System:** Built a modular UI library ensuring consistency across the "Guest View" (search & booking) and the "Host Dashboard" (management).
+- **Performance:** Optimized Core Web Vitals by implementing lazy loading for high-resolution property images and code-splitting heavy bundles.
+
+## Key Feature: The "Host Calendar"
+
+The most complex engineering challenge was the availability management system.
+
+- **Complex State Management:** Developed a custom calendar engine (removing reliance on heavy 3rd party libraries) to handle date blocking, price overrides, and reservations.
+- **Conflict Resolution:** Implemented logic to handle race conditions where two users might try to book the same dates simultaneously.
+- **Synchronization:** Created a robust syncing mechanism that updates availability in real-time, preventing double bookings.
+
+## Fintech & Integrations
+
+Trust is the currency of PropTech. I built a secure and flexible payment infrastructure.
+
+- **Multi-Gateway Checkout:** Integrated **Wompi** and **PSE** for local Colombian payments, alongside **Stripe** for international travelers.
+- **Automated Payouts Logic:** Developed the frontend logic to display payout statuses and transaction history for hosts.
+- **Headless CMS (Strapi):** Decoupled marketing content from the codebase. This allowed the marketing team to launch landing pages and update SEO tags without requiring engineering deployments.
+
+## Impact
+
+- **Scalability:** The platform successfully handled a 300% increase in property listings without performance degradation.
+- **Conversion:** Reduced checkout drop-off rates by simplifying the booking flow and adding clear feedback states during payments.
+- **Efficiency:** The CMS integration reduced "content-update" tickets for developers by nearly 100%.
+
+[Visit Rentadiario ->](https://rentadiario.com/)
