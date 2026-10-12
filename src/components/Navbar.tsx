@@ -53,7 +53,7 @@ export function Navbar() {
       },
       { rootMargin: "-45% 0px -50% 0px" },
     );
-    for (const id of ["top", ...LINKS]) {
+    for (const id of ["top", ...LINKS, "contact"]) {
       const el = document.getElementById(id);
       if (el) io.observe(el);
     }
@@ -185,12 +185,21 @@ export function Navbar() {
             key={id}
             href={`#${id}`}
             onClick={() => setOpen(false)}
+            aria-current={active === id ? "true" : undefined}
             style={{ transitionDelay: open ? `${100 + i * 70}ms` : "0ms" }}
-            className={`font-display text-6xl font-extrabold transition-[translate,opacity] duration-500 ${
+            className={`flex items-center gap-3 font-display text-6xl font-extrabold transition-[translate,opacity] duration-500 ${
               open ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
             }`}
           >
-            {id}
+            {/* current section: same tilted lime box as "me" in About, plus a mono "you're here" tag */}
+            <span
+              className={
+                active === id ? "-rotate-2 rounded-lg border-2 border-ink bg-green px-3 shadow-[3px_3px_0_var(--color-ink)]" : ""
+              }
+            >
+              {id}
+            </span>
+            {active === id && <span className="font-mono text-xs font-normal">← you&apos;re here</span>}
           </a>
         ))}
       </nav>
