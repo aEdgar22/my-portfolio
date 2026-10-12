@@ -43,7 +43,10 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const p = PROJECTS.find((x) => x.slug === slug);
-  return p ? { title: `${p.name} — Edgar De Avila`, description: p.impact } : {};
+  if (!p) return {};
+  const title = `${p.name} — Edgar De Avila`;
+  // openGraph is merged shallowly, so repeat title/description or the home ones leak in
+  return { title, description: p.impact, openGraph: { title, description: p.impact, images: "/opengraph-image" } };
 }
 
 export default async function CaseStudy({ params }: { params: Promise<{ slug: string }> }) {

@@ -81,41 +81,42 @@ export function Hero() {
 
   return (
     // invisible until GSAP sets initial states, avoids a flash of the final layout
-    <section ref={root} id="top" className="invisible grid min-h-svh place-items-center px-6 pt-28 pb-16">
+    <section ref={root} id="top" className="invisible grid place-items-center px-6 pt-36 pb-24 md:min-h-svh md:pt-28 md:pb-16">
       <div className="grid w-full max-w-6xl items-center gap-16 md:grid-cols-[1.3fr_1fr] md:gap-10 lg:gap-16">
         <div className="flex flex-col items-start">
-          <span
-            data-badge
-            className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-yellow px-3 py-1 font-mono text-xs shadow-[3px_3px_0_var(--color-ink)]"
-          >
-            <span className="size-2 animate-pulse rounded-full bg-forest" />
-            status: shipping with AI
-          </span>
-
-          <div className="relative mt-6 w-full">
-            <h1
-              data-title
-              className="isolate font-display text-6xl leading-[0.95] font-extrabold tracking-tight md:text-[clamp(3.5rem,7vw,5rem)] lg:text-8xl"
+          {/* badge left, avatar right (mobile only): the avatar keeps its own space in the flow so it never covers
+              the name; on very narrow screens it wraps below the badge, still right-aligned */}
+          <div className="flex w-full flex-wrap items-center gap-3">
+            <span
+              data-badge
+              className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-yellow px-3 py-1 font-mono text-xs shadow-[3px_3px_0_var(--color-ink)]"
             >
-              Hi, I&apos;m{" "}
-              <span className="relative inline-block">
-                <span
-                  data-marker
-                  className="absolute inset-x-[-0.1em] bottom-[0.08em] -z-10 h-[0.4em] origin-left -rotate-1 bg-green"
-                />
-                Edgar
-              </span>
-            </h1>
-            {/* mobile only: the big avatar column drops below the fold, so a small one sits next to "Edgar" */}
+              <span className="size-2 animate-pulse rounded-full bg-forest" />
+              status: shipping with AI
+            </span>
             <div
               data-avatar
-              className="absolute top-1/2 right-0 size-24 -translate-y-1/2 rounded-full border-2 border-ink bg-green shadow-[3px_3px_0_var(--color-ink)] min-[400px]:size-28 md:hidden"
+              className="ml-auto size-[clamp(72px,22vw,104px)] shrink-0 rounded-full border-2 border-ink bg-green shadow-[3px_3px_0_var(--color-ink)] md:hidden"
             >
               <div data-float className="grid size-full place-items-center">
                 <Avatar className="w-[72%] text-ink" />
               </div>
             </div>
           </div>
+
+          <h1
+            data-title
+            className="isolate mt-6 font-display text-6xl leading-[0.95] font-extrabold tracking-tight max-md:mt-4 md:text-[clamp(3.5rem,7vw,5rem)] lg:text-8xl"
+          >
+            Hi, I&apos;m{" "}
+            <span className="relative inline-block">
+              <span
+                data-marker
+                className="absolute inset-x-[-0.1em] bottom-[0.08em] -z-10 h-[0.4em] origin-left -rotate-1 bg-green"
+              />
+              Edgar
+            </span>
+          </h1>
 
           <p className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-4 font-display lg:mt-8 lg:gap-y-8 font-bold">
             <span data-old-role className="relative text-3xl md:whitespace-nowrap lg:text-5xl">

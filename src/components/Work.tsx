@@ -76,7 +76,7 @@ export function Work() {
     <>
       <Marquee />
 
-      <section ref={root} id="work" className="relative bg-ink px-6 pt-16 pb-28 text-bg">
+      <section ref={root} id="work" className="relative -mt-px bg-ink px-6 pt-16 pb-28 text-bg">
         <div className="mx-auto max-w-6xl">
           <span
             data-reveal

@@ -15,7 +15,7 @@ export function Marquee({ flip }: { flip?: boolean }) {
   return (
     <div
       aria-hidden
-      className={`overflow-hidden py-6 ${
+      className={`-my-px overflow-hidden py-6 ${
         flip
           ? "bg-[linear-gradient(var(--color-ink)_50%,var(--color-bg)_50%)]"
           : "bg-[linear-gradient(var(--color-bg)_50%,var(--color-ink)_50%)]"
