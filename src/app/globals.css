@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f5f1e6;
+  --color-ink: #161616;
+  --color-green: #b7f34a;
+  --color-yellow: #ffd93d;
+  --color-forest: #1f4d3a;
+
+  --font-display: var(--font-bricolage), system-ui, sans-serif;
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+
+  --shadow-hard: 6px 6px 0 var(--color-ink);
+
+  --animate-marquee: marquee 45s linear infinite;
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  --animate-shine: shine 6s linear infinite;
+  @keyframes shine {
+    to {
+      background-position: 300% 0;
+    }
+  }
+}
+
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
+/* anything poking past the right edge mid-animation (hero strike, stickers) would widen the
+   mobile layout viewport and stretch the fixed navbar; clip (not hidden) keeps sticky/Lenis working */
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  @apply bg-bg text-ink font-sans antialiased;
+}
